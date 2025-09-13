@@ -1,9 +1,11 @@
 package org.example
 
+import com.google.gson.Gson
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
+import kotlin.jvm.java
 
 fun main() {
    val client: HttpClient = HttpClient.newHttpClient()
@@ -14,6 +16,10 @@ fun main() {
     val response = client
         .send(request, HttpResponse.BodyHandlers.ofString())
 
-    val myGames = Games("Batman: Arkham Asylum Game of the Year Edition", "https:\\\\/\\\\/cdn.cloudflare.steamstatic.com\\\\/steam\\\\/apps\\\\/35140\\\\/capsule_sm_120.jpg?t=1681938587", "Batman Game")
+    val json = response.body()
+    println(json)
+
+    val gson = Gson()
+    val myGames = gson.fromJson(json, InfoGame::class.java)
     println(myGames)
 }
