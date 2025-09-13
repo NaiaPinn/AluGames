@@ -1,4 +1,4 @@
-package org.example
+package br.com.naiapinn.alugames.model
 
 class Games(val title: String, val cover: String  ) {
 

@@ -1,5 +1,7 @@
-package org.example
+package br.com.naiapinn.alugames.main
 
+import br.com.naiapinn.alugames.model.Games
+import br.com.naiapinn.alugames.model.InfoGame
 import com.google.gson.Gson
 import com.google.gson.JsonParser
 import java.net.URI
@@ -12,22 +14,19 @@ fun main() {
     val reading = Scanner(System.`in`)
     println("Enter a game code to search: ")
     val search = reading.nextLine()
-
     val address = "https://www.cheapshark.com/api/1.0/games?id=$search"
 
-   val client: HttpClient = HttpClient.newHttpClient()
-   val request = HttpRequest.newBuilder()
+    val client: HttpClient = HttpClient.newHttpClient()
+    val request = HttpRequest.newBuilder()
         .uri(URI.create(address))
         .build()
 
     val response = client
         .send(request, HttpResponse.BodyHandlers.ofString())
-
     val json = response.body()
-
+    var myInfoGames: InfoGame? = null
     val gson = Gson()
     val jsonElement = JsonParser.parseString(json)
-    var myInfoGames: InfoGame? = null
     if (jsonElement.isJsonObject){
         myInfoGames = gson.fromJson(json, InfoGame::class.java)
     } else if (jsonElement.isJsonArray){
