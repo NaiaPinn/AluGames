@@ -14,10 +14,6 @@ fun main() {
     val response = client
         .send(request, HttpResponse.BodyHandlers.ofString())
 
-    val myGames = Games()
-    myGames.title = "Batman: Arkham Asylum Game of the Year Edition"
-    myGames.cover = "https:\\\\/\\\\/cdn.cloudflare.steamstatic.com\\\\/steam\\\\/apps\\\\/35140\\\\/capsule_sm_120.jpg?t=1681938587"
-    myGames.description = "Jogo do Batman"
-
+    val myGames = Games("Batman: Arkham Asylum Game of the Year Edition", "https:\\\\/\\\\/cdn.cloudflare.steamstatic.com\\\\/steam\\\\/apps\\\\/35140\\\\/capsule_sm_120.jpg?t=1681938587", "Batman Game")
     println(myGames)
 }

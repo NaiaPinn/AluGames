@@ -1,10 +1,6 @@
 package org.example
 
-class Games {
-
-    var title = ""
-    var cover = ""
-    var description = ""
+class Games(val title: String, val cover: String, val description: String  ) {
 
     override fun toString(): String {
         return "My Games: \n" +
