@@ -20,6 +20,7 @@ fun main() {
     println(json)
 
     val gson = Gson()
-    val myGames = gson.fromJson(json, InfoGame::class.java)
+    val myInfoGames = gson.fromJson(json, InfoGame::class.java)
+    val myGames = Games(myInfoGames.info.title, myInfoGames.info.thumb)
     println(myGames)
 }
