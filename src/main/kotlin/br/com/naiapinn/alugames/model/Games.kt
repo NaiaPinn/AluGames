@@ -1,6 +1,6 @@
 package br.com.naiapinn.alugames.model
 
-class Games(val title: String, val cover: String  ) {
+class Games(val title: String?, val cover: String?) {
 
     var description = ""
     override fun toString(): String {
