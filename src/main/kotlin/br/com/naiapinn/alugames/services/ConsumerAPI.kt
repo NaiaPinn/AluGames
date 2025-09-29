@@ -1,8 +1,11 @@
 package br.com.naiapinn.alugames.services
 
 import br.com.naiapinn.alugames.model.Gamer
+import br.com.naiapinn.alugames.model.Games
 import br.com.naiapinn.alugames.model.InfoGame
+import br.com.naiapinn.alugames.model.InfoGameJson
 import br.com.naiapinn.alugames.model.InfoGamerJson
+import br.com.naiapinn.alugames.utility.createGame
 import br.com.naiapinn.alugames.utility.createGamer
 import com.google.gson.Gson
 import com.google.gson.JsonElement
@@ -40,6 +43,18 @@ class ConsumerAPI {
         } else {
             null
         }
+    }
+
+    fun searchGameJson(): List<Games> {
+        val address = "https://raw.githubusercontent.com/NaiaPinn/AluGames/refs/heads/alugames/json/games.json"
+        val json = consumerData(address)
+        val gson = Gson()
+        val myGamesType = object  : TypeToken<List<InfoGameJson>>() {}.type
+        val listGames: List<InfoGameJson> = gson.fromJson(json, myGamesType)
+
+        val listaGamesMap = listGames.map { infoGameJson -> infoGameJson.createGame() }
+
+        return listaGamesMap
     }
 
     fun searchGamer(): List<Gamer> {
