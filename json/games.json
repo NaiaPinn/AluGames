@@ -1,0 +1,122 @@
+[
+  {
+    "title": "The Witcher 3: Wild Hunt",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg?t=1675178392",
+    "price": 4.99,
+    "description": "An epic action RPG with a vast and immersive open world."
+  },
+  {
+    "title": "Grand Theft Auto V",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg?t=1678296348",
+    "price": 2.99,
+    "description": "An open-world action game, where you can take on the role of three protagonists and explore a city full of possibilities."
+  },
+  {
+    "title": "The Last of Us Part I",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg?t=1686864554",
+    "price": 5.99,
+    "description": "A post-apocalyptic survival adventure in a world infested by zombies and conflicting factions."
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg?t=1671485009",
+    "price": 1.99,
+    "description": "A Western action epic, with an immersive story and a vast open world to explore."
+  },
+  {
+    "title": "Assassin's Creed Valhalla",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/header.jpg?t=1671135934",
+    "price": 7.99,
+    "description": "Journey to the Viking age and take on the role of a fierce warrior in a struggle for power and glory."
+  },
+  {
+    "title": "Dandara",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/612390/header.jpg?t=1674055293",
+    "price": 9.99,
+    "description": "A platform and action game with metroidvania elements, where you control the heroine Dandara in her fight to free a world full of oppression and tyranny."
+  },
+  {
+    "title": "Cyberpunk 2077",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg?t=1687178759",
+    "price": 3.99,
+    "description": "A futuristic action RPG, where you explore a cyberpunk city full of conspiracies and advanced technology."
+  },
+  {
+    "title": "God of War",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg?t=1650554420",
+    "price": 2.99,
+    "description": "Take on the role of Kratos, a powerful Spartan warrior, and face gods and mythological creatures in a quest for revenge."
+  },
+  {
+    "title": "Call of Duty: Warzone",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1962663/header_alt_assets_0_brazilian.jpg?t=1687569624",
+    "price": 4.99,
+    "description": "A free battle royale game, where you fight for survival in an intense battlefield."
+  },
+  {
+    "title": "Minecraft Dungeons",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1672970/header.jpg?t=1666102880",
+    "price": 2.99,
+    "description": "A building and exploration game, where you can create your own world and survive in an environment full of possibilities."
+  },
+  {
+    "title": "Resident Evil Village",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/header.jpg?t=1687764412",
+    "price": 6.99,
+    "description": "A survival horror game, where you face supernatural threats in a haunted village."
+  },
+  {
+    "title": "Battlefield 2042",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1517290/header.jpg?t=1686216000",
+    "price": 7.99,
+    "description": "A first-person shooter game, set in the near future of global conflicts and intense battles."
+  },
+  {
+    "title": "Horizon Zero Dawn",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1151640/header.jpg?t=1667297464",
+    "price": 3.99,
+    "description": "An action-adventure game, where you take on the role of Aloy, a skilled hunter, in a post-apocalyptic world dominated by machines."
+  },
+  {
+    "title": "Marvel's Spider-Man",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/header.jpg?t=1673999865",
+    "price": 4.99,
+    "description": "Swing through the skyscrapers of New York as the iconic hero Spider-Man and face dangerous villains in an exciting narrative."
+  },
+  {
+    "title": "Persona 5",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1687950/header.jpg?t=1679398700",
+    "price": 2.99,
+    "description": "A stylized RPG, where you live the life of a high school student during the day and combat supernatural threats at night."
+  },
+  {
+    "title": "BioShock Infinite",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/8870/header.jpg?t=1602794480",
+    "price": 2.99,
+    "description": "An immersive first-person shooter experience, set in a floating city full of mysteries and twists."
+  },
+  {
+    "title": "Final Fantasy VII Remake",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1462040/header.jpg?t=1663767129",
+    "price": 6.99,
+    "description": "A remake of the classic RPG, where you follow Cloud Strife and his allies on a journey to save the world from the evil Shinra corporation."
+  },
+  {
+    "title": "Dark Souls III",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/374320/header.jpg?t=1682651227",
+    "price": 5.99,
+    "description": "A challenging action RPG, where you face powerful enemies and explore a dark and dangerous world."
+  },
+  {
+    "title": "The Elder Scrolls V: Skyrim",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/72850/header.jpg?t=1647357402",
+    "price": 4.99,
+    "description": "An epic fantasy RPG, where you explore a vast open world, face dragons, and shape your own destiny."
+  },
+  {
+    "title": "Hades",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg?t=1680293801",
+    "price": 4.99,
+    "description": "An action and roguelike game, where you take on the role of the son of the god of the dead and fight to escape the Greek underworld."
+  }
+]
