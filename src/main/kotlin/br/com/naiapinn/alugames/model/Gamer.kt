@@ -50,6 +50,10 @@ data class Gamer(var name: String, var email: String){
         }
     }
 
+    fun rentGame(games: Games): Rent{
+        return Rent(this, games)
+    }
+
     companion object {
         fun createGamer(reading: Scanner): Gamer {
             println("Welcome to AluGames! Let's make your registration. Enter your name:")
