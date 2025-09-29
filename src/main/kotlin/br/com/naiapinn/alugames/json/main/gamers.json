@@ -1,0 +1,45 @@
+
+[
+  {
+    "name": "Monica",
+    "email": "moni@email.com",
+    "birthDate": "15/03/1995",
+    "userName": "moni",
+    "internalId": "moni#1234"
+  },
+  {
+    "name": "Ana",
+    "email": "ana@email.com",
+    "birthDate": "28/07/1990",
+    "userName": "aninha",
+    "internalId": "aninha#5678"
+  },
+  {
+    "name": "Guilherme",
+    "email": "guilherme@email.com",
+    "birthDate": "10/11/1998",
+    "userName": "gui",
+    "internalId": "gui#9012"
+  },
+  {
+    "name": "Caroline",
+    "email": "carol@email.com",
+    "birthDate": "02/05/1992",
+    "userName": "carowl",
+    "internalId": "carowl#3456"
+  },
+  {
+    "name": "Bruno",
+    "email": "bruno@email.com",
+    "birthDate": "19/09/1987",
+    "userName": "bruno",
+    "internalId": "bruno#7890"
+  },
+  {
+    "name": "Camila",
+    "email": "camila@email.com",
+    "birthDate": "07/12/1993",
+    "userName": "mila",
+    "internalId": "mila#7890"
+  }
+]
