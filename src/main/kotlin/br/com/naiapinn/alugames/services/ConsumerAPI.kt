@@ -1,9 +1,13 @@
 package br.com.naiapinn.alugames.services
 
+import br.com.naiapinn.alugames.model.Gamer
 import br.com.naiapinn.alugames.model.InfoGame
+import br.com.naiapinn.alugames.model.InfoGamerJson
+import br.com.naiapinn.alugames.utility.createGamer
 import com.google.gson.Gson
 import com.google.gson.JsonElement
 import com.google.gson.JsonParser
+import com.google.gson.reflect.TypeToken
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -14,20 +18,21 @@ class ConsumerAPI {
     private val client: HttpClient = HttpClient.newHttpClient()
     private lateinit var request: HttpRequest
     private lateinit var response: HttpResponse<String>
-    var json: String = ""
     private val gson = Gson()
-    lateinit var myInfoGames: InfoGame
 
-    fun searchGame(id: String): InfoGame? {
-        val address = "https://www.cheapshark.com/api/1.0/games?id=$id"
-
-         request = HttpRequest.newBuilder()
+    private fun consumerData(address: String): String {
+        request = HttpRequest.newBuilder()
             .uri(URI.create(address))
             .build()
 
-         response = client.send(request, HttpResponse.BodyHandlers.ofString())
-         json = response.body()
+        response = client.send(request, HttpResponse.BodyHandlers.ofString())
+       return response.body()
 
+    }
+
+    fun searchGame(id: String): InfoGame? {
+        val address = "https://www.cheapshark.com/api/1.0/games?id=$id"
+        val json = consumerData(address)
         val jsonElement: JsonElement = JsonParser.parseString(json)
 
         return if (jsonElement.isJsonObject) {
@@ -35,4 +40,17 @@ class ConsumerAPI {
         } else {
             null
         }
-    }}
+    }
+
+    fun searchGamer(): List<Gamer> {
+        val address = "https://raw.githubusercontent.com/NaiaPinn/AluGames/refs/heads/alugames/json/gamers.json"
+        val json = consumerData(address)
+        val gson = Gson()
+        val myGamerType = object  : TypeToken<List<InfoGamerJson>>() {}.type
+        val listGamer: List<InfoGamerJson> = gson.fromJson(json, myGamerType)
+
+        val listaGamerMap = listGamer.map { infoGamerJson -> infoGamerJson.createGamer() }
+
+        return listaGamerMap
+    }
+}
