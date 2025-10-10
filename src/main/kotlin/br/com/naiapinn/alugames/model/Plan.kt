@@ -1,0 +1,9 @@
+package br.com.naiapinn.alugames.model
+
+open class Plan(val type: String) {
+
+    fun obtainPrice(rent: Rent): Double {
+        return rent.games.price * rent.period.inDays
+
+    }
+}
