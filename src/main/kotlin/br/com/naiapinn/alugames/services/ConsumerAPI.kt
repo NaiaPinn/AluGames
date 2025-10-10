@@ -29,7 +29,7 @@ class ConsumerAPI {
             .build()
 
         response = client.send(request, HttpResponse.BodyHandlers.ofString())
-       return response.body()
+        return response.body()
 
     }
 
@@ -49,7 +49,7 @@ class ConsumerAPI {
         val address = "https://raw.githubusercontent.com/NaiaPinn/AluGames/refs/heads/alugames/json/games.json"
         val json = consumerData(address)
         val gson = Gson()
-        val myGamesType = object  : TypeToken<List<InfoGameJson>>() {}.type
+        val myGamesType = object : TypeToken<List<InfoGameJson>>() {}.type
         val listGames: List<InfoGameJson> = gson.fromJson(json, myGamesType)
 
         val listaGamesMap = listGames.map { infoGameJson -> infoGameJson.createGame() }
@@ -61,7 +61,7 @@ class ConsumerAPI {
         val address = "https://raw.githubusercontent.com/NaiaPinn/AluGames/refs/heads/alugames/json/gamers.json"
         val json = consumerData(address)
         val gson = Gson()
-        val myGamerType = object  : TypeToken<List<InfoGamerJson>>() {}.type
+        val myGamerType = object : TypeToken<List<InfoGamerJson>>() {}.type
         val listGamer: List<InfoGamerJson> = gson.fromJson(json, myGamerType)
 
         val listaGamerMap = listGamer.map { infoGamerJson -> infoGamerJson.createGamer() }

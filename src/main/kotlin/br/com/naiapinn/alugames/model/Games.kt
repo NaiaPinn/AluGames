@@ -5,7 +5,7 @@ class Games(val title: String?, val cover: String?) {
     var description = ""
     var price = 0.0
 
-    constructor(title: String?, cover: String?, description: String, price: Double ): this(title, cover) {
+    constructor(title: String?, cover: String?, description: String, price: Double) : this(title, cover) {
         this.price = price
         this.description = description
     }

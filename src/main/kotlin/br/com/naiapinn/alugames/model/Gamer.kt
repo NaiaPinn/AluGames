@@ -3,7 +3,7 @@ package br.com.naiapinn.alugames.model
 import java.util.*
 import kotlin.random.Random
 
-data class Gamer(var name: String, var email: String){
+data class Gamer(var name: String, var email: String) {
     var birthDate: String? = null
     var userName: String? = null
         set(value) {
@@ -14,18 +14,20 @@ data class Gamer(var name: String, var email: String){
         }
     var internalId: String? = null
         private set
+    var plan: IndividualPlan = IndividualPlan("BRONZE")
     val searchedGames = mutableListOf<Games?>()
+    val rentedGames = mutableListOf<Rent>()
 
-    constructor(name: String, email: String, birthDate: String, userName: String):
-     this(name, email){
+    constructor(name: String, email: String, birthDate: String, userName: String) :
+            this(name, email) {
         this.name = name
         this.email = email
         generateInternalId()
-     }
+    }
 
     init {
         this.email = verifyEmail()
-        if (name.isBlank()){
+        if (name.isBlank()) {
             throw IllegalArgumentException("Invalid name")
         }
     }
@@ -43,15 +45,17 @@ data class Gamer(var name: String, var email: String){
 
     fun verifyEmail(): String {
         val regex = Regex(pattern = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$")
-        if(regex.matches(email)){
+        if (regex.matches(email)) {
             return email
-        } else{
+        } else {
             throw IllegalArgumentException("Invalid E-mail")
         }
     }
 
-    fun rentGame(games: Games): Rent{
-        return Rent(this, games)
+    fun rentGame(games: Games, periodRent: PeriodRent): Rent {
+        val rent = Rent(this, games, periodRent)
+        rentedGames.add(rent)
+        return rent
     }
 
     companion object {
@@ -63,14 +67,14 @@ data class Gamer(var name: String, var email: String){
             println("Do you want to complete your registration with user and date of birth? (Y/N)")
             val option = reading.nextLine()
 
-            if (option.equals("s", true)){
+            if (option.equals("s", true)) {
                 println("Digite sua data de nascimento(DD/MM/AAAA):")
                 val birthDate = reading.nextLine()
                 println("Digite seu nome de usuário:")
                 val userName = reading.nextLine()
 
                 return Gamer(name, email, birthDate, userName)
-            } else{
+            } else {
                 return Gamer(name, email)
             }
         }
