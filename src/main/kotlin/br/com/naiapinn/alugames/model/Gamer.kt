@@ -24,7 +24,6 @@ data class Gamer(var name: String, var email: String): Recommended {
     override fun toRecommend(note: Int) {
         listNotes.add(note)
     }
-
     constructor(name: String, email: String, birthDate: String, userName: String) :
             this(name, email) {
         this.name = name
