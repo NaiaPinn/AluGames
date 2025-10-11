@@ -14,7 +14,7 @@ data class Gamer(var name: String, var email: String) {
         }
     var internalId: String? = null
         private set
-    var plan: IndividualPlan = IndividualPlan("BRONZE")
+    var plan: Plan = IndividualPlan("BRONZE")
     val searchedGames = mutableListOf<Games?>()
     val rentedGames = mutableListOf<Rent>()
 
@@ -56,6 +56,12 @@ data class Gamer(var name: String, var email: String) {
         val rent = Rent(this, games, periodRent)
         rentedGames.add(rent)
         return rent
+    }
+
+    fun gameOfTheMonth(month:Int): List<Games> {
+        return rentedGames
+            .filter { rent ->  rent.period.startDate.monthValue == month}
+            .map { rent ->  rent.games}
     }
 
     companion object {
