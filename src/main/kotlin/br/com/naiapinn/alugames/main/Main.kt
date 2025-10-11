@@ -3,7 +3,6 @@ package br.com.naiapinn.alugames.main
 import br.com.naiapinn.alugames.model.Gamer
 import br.com.naiapinn.alugames.model.Games
 import br.com.naiapinn.alugames.services.ConsumerAPI
-import com.google.gson.Gson
 import transformAge
 import java.util.*
 
@@ -17,7 +16,6 @@ fun main() {
     do {
         println("Enter a game code to search: ")
         val search = reading.nextLine()
-        val gson = Gson()
         val consumerAPI = ConsumerAPI()
         val infoSearchGame = consumerAPI.searchGame(search)
 
