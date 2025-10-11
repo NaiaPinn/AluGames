@@ -3,7 +3,7 @@ package br.com.naiapinn.alugames.model
 import java.util.*
 import kotlin.random.Random
 
-data class Gamer(var name: String, var email: String) {
+data class Gamer(var name: String, var email: String): Recommended {
     var birthDate: String? = null
     var userName: String? = null
         set(value) {
@@ -17,6 +17,13 @@ data class Gamer(var name: String, var email: String) {
     var plan: Plan = IndividualPlan("BRONZE")
     val searchedGames = mutableListOf<Games?>()
     val rentedGames = mutableListOf<Rent>()
+    private val listNotes = mutableListOf<Int>()
+    override val media: Double
+        get() = listNotes.average()
+
+    override fun toRecommend(note: Int) {
+        listNotes.add(note)
+    }
 
     constructor(name: String, email: String, birthDate: String, userName: String) :
             this(name, email) {
@@ -33,7 +40,7 @@ data class Gamer(var name: String, var email: String) {
     }
 
     override fun toString(): String {
-        return "Gamer(name='$name', email='$email', birthDate=$birthDate, userName=$userName, internalId=$internalId)"
+        return "Gamer(name='$name', email='$email', birthDate=$birthDate, userName=$userName, internalId=$internalId), media=$media"
     }
 
     fun generateInternalId() {
