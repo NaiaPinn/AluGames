@@ -1,6 +1,6 @@
 package br.com.naiapinn.alugames.model
 
-sealed class Plan(val type: String) {
+sealed class Plan(val type: String, var id: Int = 0) {
 
     open fun obtainPrice(rent: Rent): Double {
         return rent.games.price * rent.period.inDays

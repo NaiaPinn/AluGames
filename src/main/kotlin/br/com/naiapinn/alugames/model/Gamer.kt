@@ -12,6 +12,7 @@ data class Gamer(var name: String, var email: String): Recommended {
                 generateInternalId()
             }
         }
+    var id = 0
     var internalId: String? = null
         private set
     var plan: Plan = IndividualPlan("BRONZE")
@@ -31,10 +32,11 @@ data class Gamer(var name: String, var email: String): Recommended {
         gamesRecommended.add(games)
 
     }
-    constructor(name: String, email: String, birthDate: String, userName: String) :
+    constructor(name: String, email: String, birthDate: String, userName: String, id: Int = 0) :
             this(name, email) {
         this.name = name
         this.email = email
+        this.id = id
         generateInternalId()
     }
 
@@ -46,7 +48,7 @@ data class Gamer(var name: String, var email: String): Recommended {
     }
 
     override fun toString(): String {
-        return "Gamer(name='$name', email='$email', birthDate=$birthDate, userName=$userName, internalId=$internalId), media=$media"
+        return "Gamer(name='$name', email='$email', birthDate=$birthDate, userName=$userName, internalId=$internalId), media=$media, id=$id"
     }
 
     fun generateInternalId() {
