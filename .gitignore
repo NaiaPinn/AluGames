@@ -36,3 +36,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+src/main/kotlin/br/com/naiapinn/alugames/main/testJson.kt
+src/main/kotlin/br/com/naiapinn/alugames/main/testDataBase.kt
