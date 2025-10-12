@@ -1,6 +1,8 @@
 package br.com.naiapinn.alugames.model
 
-class Games(val title: String?, val cover: String?): Recommended {
+import com.google.gson.annotations.Expose
+
+class Games(@Expose val title: String?, @Expose val cover: String?): Recommended {
 
     var description = ""
     var price = 0.0
