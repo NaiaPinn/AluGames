@@ -2,7 +2,7 @@ package br.com.naiapinn.alugames.model
 
 import com.google.gson.annotations.Expose
 
-class Games(@Expose val title: String?, @Expose val cover: String?): Recommended {
+data class Games(@Expose val title: String?, @Expose val cover: String?): Recommended {
 
     var description = ""
     var price = 0.0
@@ -21,7 +21,7 @@ class Games(@Expose val title: String?, @Expose val cover: String?): Recommended
     }
 
     override fun toString(): String {
-        return "My Games: \n" +
+        return "\nMy Games: \n" +
                 "Title: $title \n" +
                 "Cover: $cover \n" +
                 "Description: $description\n" +
